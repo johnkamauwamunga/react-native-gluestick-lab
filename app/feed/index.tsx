@@ -1,0 +1,70 @@
+import {
+  Avatar,
+  AvatarFallbackText,
+  AvatarImage,
+} from "@/components/ui/avatar";
+import { Box } from "@/components/ui/box";
+import { Button, ButtonText } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
+import { Image } from "@/components/ui/image";
+import { Text } from "@/components/ui/text";
+import { VStack } from "@/components/ui/vstack";
+import { SafeAreaView } from "react-native-safe-area-context";
+export default function Feed() {
+  return (
+    <SafeAreaView className="flex-1 bg-white">
+      <Card className="p-6 rounded-lg max-w-[360px] m-3">
+        <Box className="flex-row">
+          <Avatar className="mr-4">
+            <AvatarFallbackText>JD</AvatarFallbackText>
+            <AvatarImage
+              source={{
+                uri: "https://gluestack.github.io/public-blog-video-assets/camera.png",
+              }}
+            />
+          </Avatar>
+          <VStack>
+            <Heading size="md" className="mb-1">
+              Jane Doe
+            </Heading>
+            <Text size="sm">janedoe@sample.com</Text>
+          </VStack>
+        </Box>
+        <Box className="flex-row">
+          <VStack className="items-center flex-1 pb-0 border-r border-border/70">
+            <Heading size="xs">81</Heading>
+            <Text size="xs">posts</Text>
+          </VStack>
+          <VStack className="items-center flex-1 py-0 border-r border-border/70">
+            <Heading size="xs">5,281</Heading>
+            <Text size="xs">followers</Text>
+          </VStack>
+          <VStack className="items-center flex-1 pt-0">
+            <Heading size="xs">281</Heading>
+            <Text size="xs">following</Text>
+          </VStack>
+        </Box>
+        <Box className="flex-row items-center justify-center">
+          <Image
+            source={{
+              uri: "https://gluestack.github.io/public-blog-video-assets/parrot.png",
+            }}
+            className="rounded-md w-[45%] h-[140px] mb-0 mr-3 sm:w-[150px] sm:h-[154px]"
+            alt="image"
+          />
+          <Image
+            source={{
+              uri: "https://gluestack.github.io/public-blog-video-assets/dear.png",
+            }}
+            className="rounded-md w-[45%] h-[140px] sm:w-[150px] sm:h-[154px]"
+            alt="image"
+          />
+        </Box>
+        <Button className="py-2 px-4">
+          <ButtonText size="sm">Follow</ButtonText>
+        </Button>
+      </Card>
+    </SafeAreaView>
+  );
+}
