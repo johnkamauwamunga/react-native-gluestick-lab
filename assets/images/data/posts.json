@@ -1,0 +1,282 @@
+[
+  {
+    "name": "Emma Watson",
+    "handle": "@emmawatson",
+    "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "posts": {
+      "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "caption": "Into the wild"
+    },
+    "stats": {
+      "posts": "42",
+      "followers": "12,847",
+      "following": "531"
+    }
+  },
+  {
+    "name": "Liam O'Brien",
+    "handle": "@liamob",
+    "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "posts": {
+      "imageUrl": "https://gluestack.github.io/public-blog-video-assets/mountains.png",
+      "caption": "Best friends forever"
+    },
+    "stats": {
+      "posts": "18",
+      "followers": "3,209",
+      "following": "1,022"
+    }
+  },
+  {
+    "name": "Sophia Chen",
+    "handle": "@sophiacodes",
+    "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?city,1",
+      "caption": "Neon nights"
+    },
+    "stats": {
+      "posts": "67",
+      "followers": "9,512",
+      "following": "345"
+    }
+  },
+  {
+    "name": "Mason Taylor",
+    "handle": "@masont",
+    "image": "https://source.unsplash.com/100x100/?person,4",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?food,1",
+      "caption": "Brunch vibes"
+    },
+    "stats": {
+      "posts": "34",
+      "followers": "6,784",
+      "following": "890"
+    }
+  },
+  {
+    "name": "Olivia Martinez",
+    "handle": "@oliviam",
+    "image": "https://source.unsplash.com/100x100/?person,5",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?tech,1",
+      "caption": "Future is now"
+    },
+    "stats": {
+      "posts": "29",
+      "followers": "15,203",
+      "following": "672"
+    }
+  },
+  {
+    "name": "Noah Kim",
+    "handle": "@noahk",
+    "image": "https://source.unsplash.com/100x100/?person,6",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?travel,1",
+      "caption": "Wanderlust"
+    },
+    "stats": {
+      "posts": "55",
+      "followers": "8,455",
+      "following": "1,234"
+    }
+  },
+  {
+    "name": "Ava Johnson",
+    "handle": "@avaj",
+    "image": "https://source.unsplash.com/100x100/?person,7",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?fashion,1",
+      "caption": "Style icon"
+    },
+    "stats": {
+      "posts": "22",
+      "followers": "22,109",
+      "following": "412"
+    }
+  },
+  {
+    "name": "Ethan Brown",
+    "handle": "@ethanb",
+    "image": "https://source.unsplash.com/100x100/?person,8",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?music,1",
+      "caption": "Live in concert"
+    },
+    "stats": {
+      "posts": "47",
+      "followers": "17,630",
+      "following": "256"
+    }
+  },
+  {
+    "name": "Isabella Garcia",
+    "handle": "@isabellag",
+    "image": "https://source.unsplash.com/100x100/?person,9",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?sports,1",
+      "caption": "Game day"
+    },
+    "stats": {
+      "posts": "13",
+      "followers": "4,982",
+      "following": "689"
+    }
+  },
+  {
+    "name": "James Rodriguez",
+    "handle": "@jrod",
+    "image": "https://source.unsplash.com/100x100/?person,10",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?art,1",
+      "caption": "Abstract beauty"
+    },
+    "stats": {
+      "posts": "38",
+      "followers": "11,374",
+      "following": "777"
+    }
+  },
+  {
+    "name": "Mia Williams",
+    "handle": "@miaw",
+    "image": "https://source.unsplash.com/100x100/?person,11",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?beach,1",
+      "caption": "Sunset shores"
+    },
+    "stats": {
+      "posts": "51",
+      "followers": "19,546",
+      "following": "1,003"
+    }
+  },
+  {
+    "name": "Alexander Lee",
+    "handle": "@alexlee",
+    "image": "https://source.unsplash.com/100x100/?person,12",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?mountains,1",
+      "caption": "Peak views"
+    },
+    "stats": {
+      "posts": "64",
+      "followers": "25,318",
+      "following": "920"
+    }
+  },
+  {
+    "name": "Charlotte White",
+    "handle": "@charlottew",
+    "image": "https://source.unsplash.com/100x100/?person,13",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?coffee,1",
+      "caption": "Morning brew"
+    },
+    "stats": {
+      "posts": "19",
+      "followers": "7,210",
+      "following": "548"
+    }
+  },
+  {
+    "name": "Benjamin Harris",
+    "handle": "@benh",
+    "image": "https://source.unsplash.com/100x100/?person,14",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?flowers,1",
+      "caption": "Spring bloom"
+    },
+    "stats": {
+      "posts": "44",
+      "followers": "14,872",
+      "following": "601"
+    }
+  },
+  {
+    "name": "Amelia Thompson",
+    "handle": "@ameliat",
+    "image": "https://source.unsplash.com/100x100/?person,15",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?library,1",
+      "caption": "Bookworm haven"
+    },
+    "stats": {
+      "posts": "28",
+      "followers": "5,631",
+      "following": "834"
+    }
+  },
+  {
+    "name": "Daniel Martinez",
+    "handle": "@danielm",
+    "image": "https://source.unsplash.com/100x100/?person,16",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?night,1",
+      "caption": "Stargazing"
+    },
+    "stats": {
+      "posts": "73",
+      "followers": "31,024",
+      "following": "1,456"
+    }
+  },
+  {
+    "name": "Emily Davis",
+    "handle": "@emilyd",
+    "image": "https://source.unsplash.com/100x100/?person,17",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?garden,1",
+      "caption": "Secret garden"
+    },
+    "stats": {
+      "posts": "16",
+      "followers": "2,893",
+      "following": "213"
+    }
+  },
+  {
+    "name": "Jacob Wilson",
+    "handle": "@jacobw",
+    "image": "https://source.unsplash.com/100x100/?person,18",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?ocean,1",
+      "caption": "Deep blue"
+    },
+    "stats": {
+      "posts": "60",
+      "followers": "27,450",
+      "following": "1,112"
+    }
+  },
+  {
+    "name": "Harper Jones",
+    "handle": "@harperj",
+    "image": "https://source.unsplash.com/100x100/?person,19",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?sunset,1",
+      "caption": "Golden hour"
+    },
+    "stats": {
+      "posts": "35",
+      "followers": "9,876",
+      "following": "765"
+    }
+  },
+  {
+    "name": "Michael Brown",
+    "handle": "@michaelb",
+    "image": "https://source.unsplash.com/100x100/?person,20",
+    "posts": {
+      "imageUrl": "https://source.unsplash.com/800x600/?forest,1",
+      "caption": "Into the woods"
+    },
+    "stats": {
+      "posts": "41",
+      "followers": "16,543",
+      "following": "891"
+    }
+  }
+]
