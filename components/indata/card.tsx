@@ -10,10 +10,27 @@ import { Image } from "@/components/ui/image";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
 
-export default function FeedCard(posts) {
+type FeedCardProps = {
+  name: string;
+  handle: string;
+  image: string;
+
+  posts: {
+    imageUrl: string;
+    caption: string;
+  };
+
+  stats: {
+    posts: string;
+    followers: string;
+    following: string;
+  };
+};
+
+export default function FeedCard(posts: FeedCardProps) {
   return (
     <Card
-      className="w-70 mb-5"
+      className="w-70 mb-5 px-4"
       style={{
         borderColor: "#e5e7eb",
         borderTopWidth: 1,
@@ -23,7 +40,7 @@ export default function FeedCard(posts) {
         shadowOpacity: 0,
       }}
     >
-      <Box className="flex-row w-96">
+      <Box className="flex-row items-center">
         <Avatar size="lg">
           <AvatarFallbackText>{posts.name.charAt(0)}</AvatarFallbackText>
           <AvatarImage
@@ -34,7 +51,7 @@ export default function FeedCard(posts) {
           />
         </Avatar>
 
-        <HStack className="w-full justify-between">
+        <HStack className="w-96 justify-between ">
           <VStack className="pl-6 py-2">
             <Text className="color-slate-900 text-md font-semibold ">
               {posts.name}
