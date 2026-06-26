@@ -10,10 +10,10 @@ import { Image } from "@/components/ui/image";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
 
-export default function FeedCard() {
+export default function FeedCard(posts) {
   return (
     <Card
-      className="w-70"
+      className="w-70 mb-5"
       style={{
         borderColor: "#e5e7eb",
         borderTopWidth: 1,
@@ -25,21 +25,22 @@ export default function FeedCard() {
     >
       <Box className="flex-row w-96">
         <Avatar size="lg">
-          <AvatarFallbackText>U</AvatarFallbackText>
+          <AvatarFallbackText>{posts.name.charAt(0)}</AvatarFallbackText>
           <AvatarImage
-            source={{
-              uri: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-            }}
+            // source={{
+            //   uri: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+            // }}
+            source={{ uri: posts.image }}
           />
         </Avatar>
 
         <HStack className="w-full justify-between">
           <VStack className="pl-6 py-2">
-            <Text className="color-slate-900 text-md font-semibold">
-              Gerry chen
+            <Text className="color-slate-900 text-md font-semibold ">
+              {posts.name}
             </Text>
             <Text className="color-gray-600 text-sm font-medium">
-              @gerrychen
+              {posts.handle}
             </Text>
           </VStack>
 
@@ -48,9 +49,10 @@ export default function FeedCard() {
       </Box>
       <Box className="mt-3 h-64 w-full overflow-hidden">
         <Image
-          source={{
-            uri: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-          }}
+          // source={{
+          //   uri: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          // }}
+          source={{ uri: posts.posts.imageUrl }}
           className="w-full h-full rounded-lg"
           alt="post image"
           resizeMode="cover"
