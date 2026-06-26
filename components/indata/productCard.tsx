@@ -8,22 +8,16 @@ import { Heart, ShoppingCart } from "lucide-react-native";
 import React, { memo } from "react";
 import { Text, TouchableOpacity } from "react-native";
 
-// ==============================
-// 1. Type definition
-// ==============================
 export type ProductProps = {
   id: string | number;
   name: string;
-  description?: string; // optional, fallback to empty string
+  description?: string;
   image: string;
   price: number | string;
   onWishlist?: (id: string | number) => void;
   onCart?: (id: string | number) => void;
 };
 
-// ==============================
-// 2. Component (memoized)
-// ==============================
 const ProductCard = memo(
   ({
     id,
@@ -34,7 +28,6 @@ const ProductCard = memo(
     onWishlist,
     onCart,
   }: ProductProps) => {
-    // Format price to two decimals
     const formattedPrice =
       typeof price === "number"
         ? price.toFixed(2)
@@ -42,18 +35,18 @@ const ProductCard = memo(
 
     return (
       <Card
-        className="flex-1 m-1 p-3 bg-white rounded-xl"
+        className="flex-1 m-1 p-3 rounded-xl"
         style={{
-          elevation: 2,
-          shadowColor: "#000",
-          shadowOffset: { width: 0, height: 2 },
-          shadowOpacity: 0.1,
-          shadowRadius: 4,
+          backgroundColor: "#FFFFFF",
+          elevation: 3,
+          shadowColor: "#1A1A2E",
+          shadowOffset: { width: 0, height: 3 },
+          shadowOpacity: 0.15,
+          shadowRadius: 6,
           borderWidth: 1,
-          borderColor: "#BF7224",
+          borderColor: "#E8C99B", // softened copper
         }}
       >
-        {/* Image */}
         <Box className="items-center justify-center p-2">
           <Image
             source={{ uri: image }}
@@ -61,14 +54,13 @@ const ProductCard = memo(
             size="2xl"
             rounded-lg
             alt={name}
-            // fallbackSource={require("@/assets/images/placeholder.png")} // optional
           />
         </Box>
 
-        {/* Details */}
         <VStack space="sm" className="mt-1">
           <Text
             className="font-semibold text-base"
+            style={{ color: "#1A1A2E" }} // dark navy
             numberOfLines={1}
             ellipsizeMode="tail"
           >
@@ -76,18 +68,21 @@ const ProductCard = memo(
           </Text>
 
           <Text
-            className="text-sm text-gray-500"
+            className="text-sm"
+            style={{ color: "#6B7280" }} // gray-500
             numberOfLines={2}
             ellipsizeMode="tail"
           >
             {description}
           </Text>
 
-          <Text className="font-bold text-xl text-green-700">
+          <Text
+            className="font-bold text-xl"
+            style={{ color: "#D4AF37" }} // gold
+          >
             Ksh {formattedPrice}
           </Text>
 
-          {/* Action Buttons */}
           <HStack space="md" className="mt-2 justify-between">
             <TouchableOpacity
               activeOpacity={0.7}
@@ -95,10 +90,11 @@ const ProductCard = memo(
               className="flex-1"
             >
               <Button
-                className="bg-black rounded-xl py-2 flex-1"
+                className="rounded-xl py-2 flex-1"
+                style={{ backgroundColor: "#2D2D3F" }} // dark slate
                 accessibilityLabel={`Add ${name} to wishlist`}
               >
-                <Heart size={18} color="white" strokeWidth={1.5} />
+                <Heart size={18} color="#FFFFFF" strokeWidth={1.5} />
                 <ButtonText className="ml-2 text-white text-xs">
                   Wishlist
                 </ButtonText>
@@ -111,10 +107,11 @@ const ProductCard = memo(
               className="flex-1"
             >
               <Button
-                className="bg-green-700 rounded-xl py-2 flex-1"
+                className="rounded-xl py-2 flex-1"
+                style={{ backgroundColor: "#BF7224" }} // brand copper
                 accessibilityLabel={`Add ${name} to cart`}
               >
-                <ShoppingCart size={18} color="white" strokeWidth={1.5} />
+                <ShoppingCart size={18} color="#FFFFFF" strokeWidth={1.5} />
                 <ButtonText className="ml-2 text-white text-xs">
                   Cart
                 </ButtonText>
@@ -127,7 +124,6 @@ const ProductCard = memo(
   },
 );
 
-// Optional: set display name for debugging
 ProductCard.displayName = "ProductCard";
 
 export default ProductCard;
