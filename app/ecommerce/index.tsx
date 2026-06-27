@@ -22,6 +22,7 @@ export default function Ecommerce() {
           paddingHorizontal: 8,
         }}
         contentContainerStyle={{ paddingBottom: 16 }}
+        showsVerticalScrollIndicator={false}
       />
     </SafeAreaView>
   );

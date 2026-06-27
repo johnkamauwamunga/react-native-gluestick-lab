@@ -6,7 +6,7 @@ import { Image } from "@/components/ui/image";
 import { VStack } from "@/components/ui/vstack";
 import { Heart, ShoppingCart } from "lucide-react-native";
 import React, { memo } from "react";
-import { Text, TouchableOpacity } from "react-native";
+import { Text } from "react-native";
 
 export type ProductProps = {
   id: string | number;
@@ -84,39 +84,39 @@ const ProductCard = memo(
           </Text>
 
           <HStack space="md" className="mt-2 justify-between">
-            <TouchableOpacity
+            {/* <TouchableOpacity
               activeOpacity={0.7}
               onPress={() => onWishlist?.(id)}
               className="flex-1"
+            > */}
+            <Button
+              className="rounded-xl py-2 flex-1"
+              style={{ backgroundColor: "#2D2D3F" }} // dark slate
+              accessibilityLabel={`Add ${name} to wishlist`}
+              onPress={() => onWishlist?.(id)}
             >
-              <Button
-                className="rounded-xl py-2 flex-1"
-                style={{ backgroundColor: "#2D2D3F" }} // dark slate
-                accessibilityLabel={`Add ${name} to wishlist`}
-              >
-                <Heart size={18} color="#FFFFFF" strokeWidth={1.5} />
-                <ButtonText className="ml-2 text-white text-xs">
-                  Wishlist
-                </ButtonText>
-              </Button>
-            </TouchableOpacity>
+              <Heart size={18} color="#FFFFFF" strokeWidth={1.5} />
+              <ButtonText className="ml-2 text-white text-xs">
+                Wishlist
+              </ButtonText>
+            </Button>
+            {/* </TouchableOpacity> */}
 
-            <TouchableOpacity
+            {/* <TouchableOpacity
               activeOpacity={0.7}
               onPress={() => onCart?.(id)}
               className="flex-1"
+            > */}
+            <Button
+              className="rounded-xl py-2 flex-1"
+              style={{ backgroundColor: "#BF7224" }} // brand copper
+              accessibilityLabel={`Add ${name} to cart`}
+              onPress={() => onCart?.(id)}
             >
-              <Button
-                className="rounded-xl py-2 flex-1"
-                style={{ backgroundColor: "#BF7224" }} // brand copper
-                accessibilityLabel={`Add ${name} to cart`}
-              >
-                <ShoppingCart size={18} color="#FFFFFF" strokeWidth={1.5} />
-                <ButtonText className="ml-2 text-white text-xs">
-                  Cart
-                </ButtonText>
-              </Button>
-            </TouchableOpacity>
+              <ShoppingCart size={18} color="#FFFFFF" strokeWidth={1.5} />
+              <ButtonText className="ml-2 text-white text-xs">Cart</ButtonText>
+            </Button>
+            {/* </TouchableOpacity> */}
           </HStack>
         </VStack>
       </Card>
