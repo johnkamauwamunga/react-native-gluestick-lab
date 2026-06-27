@@ -6,35 +6,34 @@ import {
 } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import { Image } from "@/components/ui/image";
-import { Bookmark } from "lucide-react-native";
+import { Bookmark, Heart } from "lucide-react-native";
 import React from "react";
 import { Box } from "../ui/box";
 import { HStack } from "../ui/hstack";
 import { Text } from "../ui/text";
 import { VStack } from "../ui/vstack";
 
-const event = {
-  id: 1,
-  name: "Samsons Wedding",
-  venue: "St Peters ACK",
-  type: "Wedding",
-  date: "24 June 2024",
-  time: "11:00 AM",
-  numOfAttending: "80",
-  bannerImage:
-    "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/ecom/boseheadphones.jpg",
-  price: 249.99,
+// Define the Event interface
+export interface Event {
+  id: number;
+  name: string;
+  venue: string;
+  type: string;
+  date: string;
+  time: string;
+  numOfAttending: string;
+  bannerImage: string;
+  price: number;
   attending: {
-    user1:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-    user2:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-    user3:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-  },
-};
+    [key: string]: string;
+  };
+}
 
-const EventCard = () => {
+interface EventCardProps {
+  event: Event;
+}
+
+const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const attendingAvatars = Object.values(event.attending);
 
   return (
@@ -48,14 +47,21 @@ const EventCard = () => {
       }}
     >
       <HStack className="items-stretch gap-3">
-        {/* Image container – fixed width and height, rounded corners */}
-        <Box className="w-[30%] aspect-square rounded-xl overflow-hidden bg-gray-100">
+        {/* Image container with banner */}
+        <Box className="w-[30%] aspect-square rounded-xl overflow-hidden bg-gray-100 relative">
           <Image
             source={{ uri: event.bannerImage }}
             resizeMode="cover"
             className="w-full h-full"
             alt={event.name}
           />
+          {/* Rose‑red type banner */}
+          <Box className="absolute bottom-2 left-2 bg-rose-500 rounded-full px-2 py-0.5 flex-row items-center">
+            <Heart size={12} color="white" fill="white" />
+            <Text className="text-white text-xs font-medium ml-1">
+              {event.type}
+            </Text>
+          </Box>
         </Box>
 
         {/* Right side content */}
@@ -64,7 +70,7 @@ const EventCard = () => {
           <HStack className="justify-between items-start">
             <Text
               className="text-lg font-bold text-gray-800 flex-1 mr-2"
-              numberOfLines={2} // prevents title from overflowing
+              numberOfLines={2}
             >
               {event.name}
             </Text>

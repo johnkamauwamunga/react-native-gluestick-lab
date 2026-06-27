@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Samsons Wedding",
+    "venue": "St Peters ACK",
+    "type": "Wedding",
+    "date": "24 June 2024",
+    "time": "11:00 AM",
+    "numOfAttending": "80",
+    "bannerImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 249.99,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Tech Summit 2025",
+    "venue": "Convention Center, Nairobi",
+    "type": "Technology",
+    "date": "15 July 2025",
+    "time": "09:00 AM",
+    "numOfAttending": "120",
+    "bannerImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 0,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Charity Gala Night",
+    "venue": "Grand Ballroom, Hilton",
+    "type": "Fundraise",
+    "date": "10 October 2024",
+    "time": "07:00 PM",
+    "numOfAttending": "200",
+    "bannerImage": "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 100,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 4,
+    "name": "React Native Workshop",
+    "venue": "iHub, Nairobi",
+    "type": "Technology",
+    "date": "22 August 2024",
+    "time": "10:00 AM",
+    "numOfAttending": "45",
+    "bannerImage": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 50,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Annual Fundraiser Dinner",
+    "venue": "KICC, Nairobi",
+    "type": "Fundraise",
+    "date": "05 December 2024",
+    "time": "06:30 PM",
+    "numOfAttending": "300",
+    "bannerImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 150,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 6,
+    "name": "DevOps Conference",
+    "venue": "Strathmore University",
+    "type": "Technology",
+    "date": "12 March 2025",
+    "time": "08:30 AM",
+    "numOfAttending": "150",
+    "bannerImage": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 75,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Beach Wedding",
+    "venue": "Diani Beach, Mombasa",
+    "type": "Wedding",
+    "date": "03 January 2025",
+    "time": "04:00 PM",
+    "numOfAttending": "120",
+    "bannerImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 0,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Startup Pitch Night",
+    "venue": "Nairobi Garage",
+    "type": "Networking",
+    "date": "18 September 2024",
+    "time": "06:00 PM",
+    "numOfAttending": "60",
+    "bannerImage": "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 20,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 9,
+    "name": "AI & Machine Learning Expo",
+    "venue": "Sarova Panafric",
+    "type": "Technology",
+    "date": "02 November 2024",
+    "time": "09:30 AM",
+    "numOfAttending": "95",
+    "bannerImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 120,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Classical Music Concert",
+    "venue": "Nairobi National Theatre",
+    "type": "Concert",
+    "date": "20 May 2024",
+    "time": "07:30 PM",
+    "numOfAttending": "180",
+    "bannerImage": "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "price": 60,
+    "attending": {
+      "user1": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user2": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "user3": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  }
+]
