@@ -49,7 +49,7 @@ export default function Events() {
   };
 
   return (
-    <View className="flex-1 bg-blue-700">
+    <View className="flex-1 bg-black/45">
       {/* Banner carousel area with fixed height */}
       <Box className="h-56 w-full relative">
         <FlatList
