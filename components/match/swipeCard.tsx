@@ -2,8 +2,9 @@ import { HStack } from "@/components/ui/hstack";
 import { Image } from "@/components/ui/image";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
-import React, { useState } from "react";
-import { Dimensions, SafeAreaView } from "react-native";
+import React from "react";
+import { Dimensions } from "react-native";
+
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import Animated, {
     runOnJS,
@@ -12,11 +13,6 @@ import Animated, {
     withSpring,
     withTiming,
 } from "react-native-reanimated";
-
-// Import the JSON data
-import usersData from "@/assets/images/data/users.json";
-import { Box } from "@/components/ui/box";
-import { Button, ButtonText } from "@/components/ui/button";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.3;
@@ -32,16 +28,22 @@ type User = {
   interests: string[];
 };
 
-// ----- SwipeCard Component (gesture-based) -----
-const SwipeCard: React.FC<{
+type SwipeCardProps = {
   user: User;
   onSwipeLeft: () => void;
   onSwipeRight: (user: User) => void;
-}> = ({ user, onSwipeLeft, onSwipeRight }) => {
+};
+
+const SwipeCard: React.FC<SwipeCardProps> = ({
+  user,
+  onSwipeLeft,
+  onSwipeRight,
+}) => {
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
   const rotate = useSharedValue(0);
 
+  // Pan gesture using the new Gesture API
   const pan = Gesture.Pan()
     .onUpdate((event) => {
       translateX.value = event.translationX;
@@ -52,6 +54,7 @@ const SwipeCard: React.FC<{
       const shouldSwipe = Math.abs(event.translationX) > SWIPE_THRESHOLD;
       if (shouldSwipe) {
         const direction = event.translationX > 0 ? "right" : "left";
+        // Animate off-screen
         translateX.value = withTiming(
           direction === "right" ? SCREEN_WIDTH : -SCREEN_WIDTH,
           {
@@ -63,6 +66,7 @@ const SwipeCard: React.FC<{
           duration: 300,
         });
 
+        // Trigger callback after animation
         setTimeout(() => {
           if (direction === "right") {
             runOnJS(onSwipeRight)(user);
@@ -71,6 +75,7 @@ const SwipeCard: React.FC<{
           }
         }, 300);
       } else {
+        // Reset to center
         translateX.value = withSpring(0);
         translateY.value = withSpring(0);
         rotate.value = withSpring(0);
@@ -85,7 +90,7 @@ const SwipeCard: React.FC<{
     ],
   }));
 
-  // Programmatic swipe via buttons
+  // Manual swipe from button
   const triggerSwipe = (direction: "left" | "right") => {
     translateX.value = withTiming(
       direction === "right" ? SCREEN_WIDTH : -SCREEN_WIDTH,
@@ -146,90 +151,4 @@ const SwipeCard: React.FC<{
   );
 };
 
-// ----- Main Screen Component -----
-export default function MatchmakerScreen() {
-  const [users, setUsers] = useState<User[]>(usersData);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [likedUser, setLikedUser] = useState<User | null>(null);
-  const [showMatch, setShowMatch] = useState(false);
-
-  const handleSwipeLeft = () => {
-    // User passed – move to next
-    nextCard();
-  };
-
-  const handleSwipeRight = (user: User) => {
-    // Like – show match overlay with interests
-    setLikedUser(user);
-    setShowMatch(true);
-    setTimeout(() => {
-      setShowMatch(false);
-      nextCard();
-    }, 2000);
-  };
-
-  const nextCard = () => {
-    setCurrentIndex((prev) => prev + 1);
-    // Optionally remove the card from the array if you want to discard it
-    // setUsers((prev) => prev.filter((_, i) => i !== currentIndex));
-  };
-
-  const currentUser = users[currentIndex];
-  if (!currentUser) {
-    return (
-      <SafeAreaView className="flex-1 items-center justify-center bg-gray-100">
-        <Text className="text-2xl font-bold">No more users</Text>
-        <Text className="text-gray-500 mt-2">Come back later!</Text>
-      </SafeAreaView>
-    );
-  }
-
-  return (
-    <SafeAreaView className="flex-1 bg-gray-100 items-center justify-center p-4">
-      <SwipeCard
-        user={currentUser}
-        onSwipeLeft={handleSwipeLeft}
-        onSwipeRight={handleSwipeRight}
-      />
-
-      {/* Action Buttons */}
-      <HStack space="4xl" className="mt-8">
-        <Button
-          className="bg-red-500 rounded-full w-16 h-16 items-center justify-center"
-          onPress={() => handleSwipeLeft()}
-        >
-          <ButtonText className="text-2xl">✕</ButtonText>
-        </Button>
-
-        <Button
-          className="bg-green-500 rounded-full w-16 h-16 items-center justify-center"
-          onPress={() => handleSwipeRight(currentUser)}
-        >
-          <ButtonText className="text-2xl">♥</ButtonText>
-        </Button>
-      </HStack>
-
-      {/* Match Overlay */}
-      {showMatch && likedUser && (
-        <Box className="absolute inset-0 bg-black/50 items-center justify-center">
-          <Box className="bg-white p-6 rounded-2xl w-3/4">
-            <Text className="text-2xl font-bold text-center">
-              It's a Match!
-            </Text>
-            <Text className="text-center mt-2">You liked {likedUser.name}</Text>
-            <VStack space="sm" className="mt-4">
-              <Text className="font-semibold">Interests:</Text>
-              <HStack space="md" className="flex-wrap">
-                {likedUser.interests.map((interest, idx) => (
-                  <Box key={idx} className="bg-gray-200 px-3 py-1 rounded-full">
-                    <Text>{interest}</Text>
-                  </Box>
-                ))}
-              </HStack>
-            </VStack>
-          </Box>
-        </Box>
-      )}
-    </SafeAreaView>
-  );
-}
+export default SwipeCard;

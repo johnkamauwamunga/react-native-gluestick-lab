@@ -1,5 +1,7 @@
+import { useRouter } from "expo-router";
 import { Bookmark, HeartIcon } from "lucide-react-native";
 import React from "react";
+import { Pressable } from "react-native";
 import {
     Avatar,
     AvatarFallbackText,
@@ -33,66 +35,75 @@ interface EventProp {
 
 const EventComponent: React.FC<EventProp> = ({ event }) => {
   const attendingAvatars = Object.values(event.attending);
+
+  const router = useRouter();
+
+  const handlePress = () => {
+    router.push(`/events/${event.id}`);
+    console.log("pressed id");
+  };
   return (
-    <Box
-      className="flex-1 mb-2 h-36 border-gray-200 bg-white rounded-xl mx-1"
-      style={{
-        borderWidth: 1,
-        elevation: 3,
-        shadowColor: "#1A1A2E",
-        shadowOpacity: 0.1,
-      }}
-    >
-      <HStack className="px-3 py-2 w-full ">
-        <Box className="h-full aspect-square">
-          <Image
-            source={{ uri: event.bannerImage }}
-            alt={event.name}
-            className="h-full w-full rounded-xl"
-            resizeMode="cover"
-          />
+    <Pressable onPress={handlePress}>
+      <Box
+        className="flex-1 mb-2 h-36 border-gray-200 bg-white rounded-xl mx-1"
+        style={{
+          borderWidth: 1,
+          elevation: 3,
+          shadowColor: "#1A1A2E",
+          shadowOpacity: 0.1,
+        }}
+      >
+        <HStack className="px-3 py-2 w-full ">
+          <Box className="h-full aspect-square">
+            <Image
+              source={{ uri: event.bannerImage }}
+              alt={event.name}
+              className="h-full w-full rounded-xl"
+              resizeMode="cover"
+            />
 
-          <HStack className="bg-red-600 absolute gap-2 rounded-full px-2 py-1 bottom-1 left-1 ">
-            <HeartIcon size={15} color="white" />
-            <Text className="color-white text-xs">{event.type}</Text>
-          </HStack>
-        </Box>
+            <HStack className="bg-red-600 absolute gap-2 rounded-full px-2 py-1 bottom-1 left-1 ">
+              <HeartIcon size={15} color="white" />
+              <Text className="color-white text-xs">{event.type}</Text>
+            </HStack>
+          </Box>
 
-        <VStack className="pl-4  flex-1 justify-between py-2">
-          {/* event name */}
-          <HStack className="justify-between items-center">
-            <Text className="text-base font-semibold color-black">
-              {event.name}
+          <VStack className="pl-4  flex-1 justify-between py-2">
+            {/* event name */}
+            <HStack className="justify-between items-center">
+              <Text className="text-base font-semibold color-black">
+                {event.name}
+              </Text>
+              <Bookmark size={18} color="blue" strokeWidth={1.5} />
+            </HStack>
+
+            <Text className="text-sm font-medium color-slate-500">
+              {event.venue}
             </Text>
-            <Bookmark size={18} color="blue" strokeWidth={1.5} />
-          </HStack>
-
-          <Text className="text-sm font-medium color-slate-500">
-            {event.venue}
-          </Text>
-          <Text className="text-sm font-medium color-slate-500">
-            {event.date} . {event.time}
-          </Text>
-          <HStack className=" items-center gap-3">
-            <AvatarGroup className="flex-row">
-              {attendingAvatars.map((uri, index) => (
-                <Avatar
-                  key={index}
-                  size="sm"
-                  className={index > 0 ? "-ml-2" : ""}
-                >
-                  <AvatarFallbackText>U</AvatarFallbackText>
-                  <AvatarImage source={{ uri }} />
-                </Avatar>
-              ))}
-            </AvatarGroup>
-            <Text className="text-md font-medium">
-              {event.numOfAttending} going
+            <Text className="text-sm font-medium color-slate-500">
+              {event.date} . {event.time}
             </Text>
-          </HStack>
-        </VStack>
-      </HStack>
-    </Box>
+            <HStack className=" items-center gap-3">
+              <AvatarGroup className="flex-row">
+                {attendingAvatars.map((uri, index) => (
+                  <Avatar
+                    key={index}
+                    size="sm"
+                    className={index > 0 ? "-ml-2" : ""}
+                  >
+                    <AvatarFallbackText>U</AvatarFallbackText>
+                    <AvatarImage source={{ uri }} />
+                  </Avatar>
+                ))}
+              </AvatarGroup>
+              <Text className="text-md font-medium">
+                {event.numOfAttending} going
+              </Text>
+            </HStack>
+          </VStack>
+        </HStack>
+      </Box>
+    </Pressable>
   );
 };
 

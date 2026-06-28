@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Alice Johnson",
+    "age": 28,
+    "image": "https://randomuser.me/api/portraits/women/1.jpg",
+    "bio": "Adventurer & coffee lover. I hike, I bike, I code.",
+    "interests": ["🌲 Hiking", "☕ Coffee", "✈️ Travel"]
+  },
+  {
+    "id": "2",
+    "name": "Bob Smith",
+    "age": 32,
+    "image": "https://randomuser.me/api/portraits/men/2.jpg",
+    "bio": "Music producer & vinyl collector. Let's jam!",
+    "interests": ["🎵 Jazz", "📸 Photography", "🍷 Wine"]
+  },
+  {
+    "id": "3",
+    "name": "Charlie Davis",
+    "age": 25,
+    "image": "https://randomuser.me/api/portraits/men/3.jpg",
+    "bio": "Fitness enthusiast & personal trainer.",
+    "interests": ["🏋️ Gym", "🥗 Healthy food", "📚 Self‑improvement"]
+  },
+  {
+    "id": "4",
+    "name": "Diana Lee",
+    "age": 29,
+    "image": "https://randomuser.me/api/portraits/women/4.jpg",
+    "bio": "Foodie & amateur chef. Cooking is my therapy.",
+    "interests": ["🍣 Sushi", "🧁 Baking", "🌍 Food tours"]
+  },
+  {
+    "id": "5",
+    "name": "Ethan Hunt",
+    "age": 35,
+    "image": "https://randomuser.me/api/portraits/men/5.jpg",
+    "bio": "Tech entrepreneur & movie buff.",
+    "interests": ["💻 AI", "🎬 Cinema", "🏄 Surfing"]
+  },
+  {
+    "id": "6",
+    "name": "Fiona Green",
+    "age": 27,
+    "image": "https://randomuser.me/api/portraits/women/6.jpg",
+    "bio": "Art lover & gallery curator.",
+    "interests": ["🎨 Painting", "🏛️ Museums", "📖 Poetry"]
+  },
+  {
+    "id": "7",
+    "name": "George Adams",
+    "age": 31,
+    "image": "https://randomuser.me/api/portraits/men/7.jpg",
+    "bio": "Cyclist & weekend explorer.",
+    "interests": ["🚴 Cycling", "⛰️ Hiking", "🍺 Craft beer"]
+  },
+  {
+    "id": "8",
+    "name": "Hannah White",
+    "age": 24,
+    "image": "https://randomuser.me/api/portraits/women/8.jpg",
+    "bio": "Dancer & yoga instructor.",
+    "interests": ["💃 Dancing", "🧘 Yoga", "🌱 Vegan food"]
+  },
+  {
+    "id": "9",
+    "name": "Ian Black",
+    "age": 30,
+    "image": "https://randomuser.me/api/portraits/men/9.jpg",
+    "bio": "Writer & amateur astronomer.",
+    "interests": ["📝 Writing", "🔭 Stargazing", "🎸 Guitar"]
+  },
+  {
+    "id": "10",
+    "name": "Julia Rose",
+    "age": 26,
+    "image": "https://randomuser.me/api/portraits/women/10.jpg",
+    "bio": "Digital marketer & travel blogger.",
+    "interests": ["📱 Social media", "✈️ Travel", "🌺 Gardening"]
+  }
+]
