@@ -11,6 +11,7 @@ import { Drawer } from "expo-router/drawer";
 import { StatusBar } from "expo-status-bar";
 import {
   Book,
+  BookAIcon,
   Heart,
   MessageCircle,
   ShoppingBag,
@@ -107,6 +108,16 @@ export default function RootLayout() {
                 title: "Match Making",
                 drawerIcon: ({ color, size }) => (
                   <Heart size={size} color={color} />
+                ),
+              }}
+            />
+
+            <Drawer.Screen
+              name="lineargradient"
+              options={{
+                title: "Linear Gradient",
+                drawerIcon: ({ color, size }) => (
+                  <BookAIcon size={size} color={color} />
                 ),
               }}
             />
