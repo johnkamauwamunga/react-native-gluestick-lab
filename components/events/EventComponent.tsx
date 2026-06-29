@@ -34,14 +34,13 @@ interface EventProp {
 }
 
 const EventComponent: React.FC<EventProp> = ({ event }) => {
-  const attendingAvatars = Object.values(event.attending);
-
-  const router = useRouter();
+  const routes = useRouter();
 
   const handlePress = () => {
-    router.push(`/events/${event.id}`);
-    console.log("pressed id");
+    routes.push(`/events/${event.id}`);
   };
+
+  const attendingAvatars = Object.values(event.attending);
   return (
     <Pressable onPress={handlePress}>
       <Box
